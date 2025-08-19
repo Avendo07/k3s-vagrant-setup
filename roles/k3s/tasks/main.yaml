@@ -1,0 +1,5 @@
+- import_tasks: install-master.yaml
+  when: node_type == 'master'
+
+- import_tasks: install-worker.yaml
+  when: node_type == 'worker'
