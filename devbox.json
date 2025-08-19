@@ -1,0 +1,13 @@
+{
+  "packages": ["kubernetes-helm@latest"],
+  "env":      {},
+  "shell": {
+    "init_hook": [
+      "echo 'Welcome to devbox!' > /dev/null",
+      "git config user.name \"Avendo07\"",
+      "git config user.email \"namankaushikplt@gmail.com\""
+    ],
+    "scripts": {}
+  },
+  "include": []
+}
