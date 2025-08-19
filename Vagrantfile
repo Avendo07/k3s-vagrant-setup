@@ -17,6 +17,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "k3s-master" do |master|
     master.vm.hostname = "k3s-master"
     master.vm.network "private_network", ip: "192.168.56.101"
+    master.vm.network "forwarded_port", guest: 6443, host: 6443     # This allows connections from outside to the master node
     master.vm.provider :libvirt do |lv|
       lv.memory = 1024
       lv.cpus = 1

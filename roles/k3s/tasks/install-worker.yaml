@@ -1,7 +1,7 @@
 - name: Wait for k3s master to be ready
   wait_for:
     path: /var/lib/rancher/k3s/server/node-token
-  delegate_to: "{{ groups['k3smaster'][0] }}"
+  delegate_to: "{{ groups['k3s_master'][0] }}"
   run_once: true
 
 - name: Get k3s token from master
