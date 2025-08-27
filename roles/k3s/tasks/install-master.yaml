@@ -1,5 +1,5 @@
 - name: Install k3s master
-  shell: curl -sfL https://get.k3s.io | sh -
+  shell: curl -sfL https://get.k3s.io | sh - --tls-san {{ ansible_default_ipv4.address }}
   args:
     creates: /usr/local/bin/k3s # Ensure idempotency
 - name: Get k3s token
